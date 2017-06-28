@@ -1,3 +1,4 @@
+# Naive q-learning
 import random
 import math
 
