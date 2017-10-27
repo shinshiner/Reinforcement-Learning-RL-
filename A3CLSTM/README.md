@@ -4,8 +4,8 @@
 默认xx * xx, 网络结构可在`model.py`里改
 
 ## 运行
-`python3 main.py`(cpu)
+`python3 main.py`   (cpu)
 
 或
 
-`CUDA_VISIBLE_DEVICES=1 python3 main.py`(gpu)
+`CUDA_VISIBLE_DEVICES=1 python3 main.py`   (gpu)
