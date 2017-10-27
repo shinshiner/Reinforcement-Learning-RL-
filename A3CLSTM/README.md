@@ -6,6 +6,6 @@
 ## 运行
 `python3 main.py`(cpu)
 
-    或
+>或
 
 `CUDA_VISIBLE_DEVICES=1 python3 main.py`(gpu)
