@@ -4,7 +4,8 @@
 默认10 * 20, 单通道, 网络结构可在`model.py`里改
 
 ## 运行
-先运行  `sudo pip3 install -e .` 安装游戏环境
+    sudo pip3 install -e .
+    cd gym_tetris
 #### PC
 `python3 main.py`   (cpu & gpu)
 
