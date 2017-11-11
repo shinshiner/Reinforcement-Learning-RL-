@@ -4,6 +4,7 @@
 默认10 * 20, 单通道, 网络结构可在`model.py`里改
 
 ## 运行
+    sudo pip3 install pygame
     sudo pip3 install -e .
     cd gym_tetris
 ### PC
@@ -19,4 +20,4 @@
 
     sh test.sh
 
-##### 游戏代码来源于[gym-tetris](https://github.com/lusob/gym-tetris)
+#### 游戏代码大部分来源于[gym-tetris](https://github.com/lusob/gym-tetris)
