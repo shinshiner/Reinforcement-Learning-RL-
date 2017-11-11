@@ -18,3 +18,5 @@
 ### 服务器终端
 
     sh test.sh
+
+##### 游戏代码来源于[gym-tetris](https://github.com/lusob/gym-tetris)
