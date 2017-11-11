@@ -7,12 +7,14 @@
     sudo pip3 install -e .
     cd gym_tetris
 #### PC
-`python3 main.py`   (cpu & gpu)
+CPU:
+    
+    python3 main.py
 
-或
+GPU:
 
-`CUDA_VISIBLE_DEVICES=0 python3 main.py`   (gpu)
+    CUDA_VISIBLE_DEVICES=0 python3 main.py
 
 #### 服务器终端
 
-`sh test.sh`
+    sh test.sh
