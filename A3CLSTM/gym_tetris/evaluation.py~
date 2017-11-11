@@ -1,0 +1,57 @@
+from __future__ import division
+import torch
+import torch.nn.functional as F
+from utils import setup_logger
+from model import agentNET
+from torch.autograd import Variable
+import time
+import logging
+import random
+import copy
+from environment import *
+
+def evaluation(args):
+    env = Tetris(100)
+    
+    model = agentNET()
+    model.eval()
+    saved_state = torch.load('/home/shin/gym-tetris/gym_tetris/trained_models/map_agent.dat')
+    model.load_state_dict(shared_model.state_dict())
+
+    while(1):
+        if args.gpu:
+            model = model.cuda()
+
+        if args.gpu:
+            cx = Variable(torch.zeros(1, 648).cuda())
+            hx = Variable(torch.zeros(1, 648).cuda())
+        else:
+            cx = Variable(torch.zeros(1, 648))
+            hx = Variable(torch.zeros(1, 648))
+
+        state = env.reset()#50 100 3
+        state = state.tolist()
+        state = reverse(state, env.WIDTH, env.HEIGHT)
+        state = torch.from_numpy(np.array([state])).float()
+
+        while(1):
+            if args.gpu:
+                value, logit, (hx, cx) = model((Variable(state.cuda()),(hx, cx)))
+            else:
+                value, logit, (hx, cx) = model((Variable(state),(hx, cx)))
+
+            prob = F.softmax(logit)
+            if args.gpu:
+                action = prob.max(1)[1].data.cpu()
+            else:
+                action = prob.max(1)[1].data
+
+            state, done, reward, _ = env.step(action.numpy()[0])
+
+            state = state.tolist()
+            state = reverse(state, env.WIDTH, env.HEIGHT)
+            state = torch.from_numpy(np.array([state])).float()
+
+            if done:
+                print('dead ! ')
+                break

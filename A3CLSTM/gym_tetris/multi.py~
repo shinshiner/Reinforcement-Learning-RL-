@@ -1,0 +1,13 @@
+import example as ex
+import multiprocessing as mp
+import time
+
+if __name__ == '__main__':
+	mp.set_start_method('spawn')
+	processes = []
+	for rank in range(0, 4):
+		p = mp.Process(target=ex.main, args=())
+		p.start()
+		processes.append(p)
+		time.sleep(0.1)
+	processes[0].join()

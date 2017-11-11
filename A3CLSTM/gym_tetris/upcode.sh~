@@ -1,0 +1,1 @@
+scp -r -P 20500 ~/TRPO/gym_tetris/main.py environment.py evaluation_utils.py models.py trpo_agent.py tetris_engine.py tetris_env.py evaluation.py train.py test.py model.py shin@202.121.182.216:/home/shin/TRPO/gym_tetris
