@@ -1,1 +1,0 @@
-scp -r -P 20500 ~/gym-tetris/gym_tetris shin@202.121.182.216:/home/shin
