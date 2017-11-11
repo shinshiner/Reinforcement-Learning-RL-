@@ -17,7 +17,6 @@ from environment import *
 
 def train(rank, args, shared_model, optimizer):
     torch.manual_seed(args.seed + rank)
-    #logger = setup_logger("worker_%d_log" % rank,  "/home/shin/SFG-IRL-map-master/logs/worker_%d_log" % rank)
 
     env = Tetris(rank)
     model = agentNET()
