@@ -8,7 +8,7 @@
     cd gym_tetris
 ### PC
 * CPU:
-   
+
         python3 main.py
 
 * GPU:
