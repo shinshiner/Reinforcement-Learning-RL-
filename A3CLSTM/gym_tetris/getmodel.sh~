@@ -1,1 +1,0 @@
-scp -r -P 20500 shin@202.121.182.216:/home/shin/TRPO/tetris.dat ./
