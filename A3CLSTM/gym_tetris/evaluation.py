@@ -16,7 +16,7 @@ def evaluation(args):
     
     model = agentNET()
     model.eval()
-    saved_state = torch.load('/home/shin/TRPO/gym_tetris/tetris.dat')
+    saved_state = torch.load('./tetris.dat')
     model.load_state_dict(model.state_dict())
 
     for _ in range(1):
