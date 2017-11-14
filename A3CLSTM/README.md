@@ -20,4 +20,4 @@
 
     sh test.sh
 
-#### 游戏代码大部分来源于[gym-tetris](https://github.com/lusob/gym-tetris)
+#### 游戏代码大部分来源于[gym-tetris](https://github.com/lusob/gym-tetris)，训练代码参照[此版本](https://github.com/ikostrikov/pytorch-a3c)
