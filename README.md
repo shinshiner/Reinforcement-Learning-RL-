@@ -1,2 +1,2 @@
 # Reinforcement-Learning-RL-
-My naive RL codes
+My naïve RL codes
